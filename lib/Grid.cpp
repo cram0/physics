@@ -34,3 +34,22 @@ void Grid::setValueAtPosition(unsigned int x, unsigned int y, int value)
 {
     _grid.at(y).at(x) = value;
 }
+
+int Grid::getValueAtPosition(unsigned int x, unsigned int y) const
+{
+    return (_grid.at(y).at(x));
+}
+
+void Grid::resetGrid()
+{
+    for (auto &y : _grid) {
+        for (auto &x : y) {
+            x = 0;
+        }
+    }
+}
+
+Grid& Grid::operator=(const Grid &grid)
+{
+
+}
